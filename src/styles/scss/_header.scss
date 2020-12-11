@@ -33,6 +33,11 @@
 			a{
 				font-size: $p--size;
 				color: $white;
+				transition: .3s;
+
+				&:hover{
+					color: $red--700;
+				}
 			}
 		}
 	 }
@@ -45,6 +50,11 @@
 			
 			span{
 				color: rgba($white, 0.8);
+				transition: .5s;
+
+				&:hover{
+					color: rgba($white, 1);
+				}
 
 				&:last-child{
 					margin-left: 1.3rem;

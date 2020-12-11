@@ -31,6 +31,12 @@
                 background-color: rgba($red--700, 0.1);
                 border-radius: $buttonBorderRadius;
                 margin-top: 1.5rem;
+                transition: .5s;
+
+                &:hover{
+                    background-color: rgba($red--700, 1);
+                    color: $white;
+                }
             }
         }
     }

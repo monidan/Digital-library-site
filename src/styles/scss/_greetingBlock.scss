@@ -66,6 +66,12 @@
                         color: $red--700;
                         background-color: rgba($red--700, 0.1);
                         border-radius: $buttonBorderRadius;
+                        transition: .5s;
+
+                        &:hover{
+                            background-color: rgba($red--700, 1);
+                            color: $white;
+                        }
                     }
                 }
             }
@@ -100,6 +106,12 @@
                 color: $blue--200;
                 background-color: rgba($blue--200, 0.1);
                 border-radius: $buttonBorderRadius;
+                transition: .5s;
+
+                    &:hover{
+                        background-color: rgba($blue--200, 1);
+                        color: $white;
+                    }
             }
         }
     }

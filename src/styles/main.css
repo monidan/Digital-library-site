@@ -77,6 +77,12 @@ body a {
   color: #D0021B;
   display: inline-block;
   padding: 0.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.r2__arrow__button:hover {
+  background-color: #d0021b;
+  color: white;
 }
 
 #r2__header {
@@ -110,6 +116,10 @@ body a {
 #r2__header .r2__header__navigation_bar ul a {
   font-size: 18px;
   color: white;
+  transition: 0.3s;
+}
+#r2__header .r2__header__navigation_bar ul a:hover {
+  color: #D0021B;
 }
 #r2__header .r2__header__buttons {
   display: flex;
@@ -119,6 +129,10 @@ body a {
 }
 #r2__header .r2__header__buttons span {
   color: rgba(255, 255, 255, 0.8);
+  transition: 0.5s;
+}
+#r2__header .r2__header__buttons span:hover {
+  color: white;
 }
 #r2__header .r2__header__buttons span:last-child {
   margin-left: 1.3rem;
@@ -187,6 +201,11 @@ body a {
   color: #D0021B;
   background-color: rgba(208, 2, 27, 0.1);
   border-radius: 8px;
+  transition: 0.5s;
+}
+#r2__greeting__block .r2__greeting__slider__inner .r2__slide_1__button .r2__button:hover {
+  background-color: #d0021b;
+  color: white;
 }
 #r2__greeting__block .r2__greeting__slider__inner .r2__slider__arrows {
   display: flex;
@@ -210,6 +229,11 @@ body a {
   color: #50E3C2;
   background-color: rgba(80, 227, 194, 0.1);
   border-radius: 8px;
+  transition: 0.5s;
+}
+#r2__greeting__block .r2__greeting__free_trial__inner .r2__button:hover {
+  background-color: #50e3c2;
+  color: white;
 }
 #r2__greeting__block .r2__greeting_demo {
   height: 100%;
@@ -264,6 +288,11 @@ main .r2__about__library .r2__library__description__inner .r2__button {
   color: #50E3C2;
   background-color: rgba(80, 227, 194, 0.1);
   border-radius: 8px;
+  transition: 0.5s;
+}
+main .r2__about__library .r2__library__description__inner .r2__button:hover {
+  background-color: #50e3c2;
+  color: white;
 }
 main .r2__about__library .r2__description__item {
   min-height: 260px;
@@ -325,6 +354,11 @@ main .r2__about__library .r2__description__item__inner__library {
   background-color: rgba(208, 2, 27, 0.1);
   border-radius: 8px;
   margin-top: 1.5rem;
+  transition: 0.5s;
+}
+#r2__popular__articles .r2__popular__publisher__inner .r2__button:hover {
+  background-color: #d0021b;
+  color: white;
 }
 
 #r2__library__benefits {
@@ -357,6 +391,11 @@ main .r2__about__library .r2__description__item__inner__library {
   background-color: rgba(80, 227, 194, 0.1);
   border-radius: 8px;
   margin-top: 1rem;
+  transition: 0.5s;
+}
+#r2__library__benefits .container .r2__benefits__help__inner .r2__button:hover {
+  background-color: #50e3c2;
+  color: white;
 }
 #r2__library__benefits .container .r2__titles__help {
   background-color: #0E1E31;
@@ -423,6 +462,18 @@ main .r2__about__library .r2__description__item__inner__library {
   column-gap: 1rem;
 }
 #r2__footer .container .r2__footer__contact_navigation ul li a {
+  position: relative;
   color: #D0021B;
   font-size: 14px;
+}
+#r2__footer .container .r2__footer__contact_navigation ul li a::after {
+  transition: width 0.3s ease-in-out;
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: rgba(208, 2, 27, 0.6);
+}
+#r2__footer .container .r2__footer__contact_navigation ul li a:hover::after {
+  width: 100%;
 }

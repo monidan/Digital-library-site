@@ -30,16 +30,20 @@
 					</nav>
 				</div>
 				<div class="r2__header__buttons">
-					<a href="#">
+						<div class="r2__header__search">
+							<label for="header__search">
+								<input id="header__search" type="text" placeholder='Find your book...' class="r2__header__search__input">
+							</label>
+						</div>
+						<span class="material-icons r2__header__search__close_button">
+							close
+						</span>
 						<span class="material-icons r2__header__search_button">
 							search
 						</span>
-					</a>
-					<a href="#">
 						<span class="material-icons-outlined r2__header__user_button">
 							account_circle
 						</span>
-					</a>
 				</div>
 			</div>
 		</header>
@@ -91,7 +95,14 @@
 							Digital Library is a powerful eBook solution
 							for your instituion. 
 						</p>
-							<!-- todo video preview -->
+						<div class="r2__greeting_demo__inner__image">
+							<img src="./assets/eBook__demo.jpg" alt="eBook demo">
+							<div class="layer"></div>
+							<div class="r2__greeting_demo__image_play_button">
+								<span class="material-icons">
+									play_arrow
+								</span>
+							</div>
 					</div>
 				</div>
 			</section>
@@ -101,11 +112,66 @@
 			<div class="container">
 				<h1>Recently added</h1>
 				<div class="r2__library__carousel">
-					<!-- todo CAROUSEL -->
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/sepsis__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									Sepsis Management in Resource-limited Settings
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/tuberculosis__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									Tuberculosis in Adults and Children
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/pediatric__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									Red Book Atlas of Pediatric Infectious Diseases
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/infections__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									Mandell, Douglas, and Bennett's Principles and Practice of…
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/design__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									The Non-designers Book
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/programming__book.jpg" alt="Book">
+								<p class="r2__library__carousel__item__description">
+									C Programming
+								</p>
+							</div>
+						</div>
+						<div class="r2__library__carousel__item">
+							<div class="r2__library__carousel__item__inner">
+								<img src="./assets/medicine__book.jpg" alt="book">
+								<p class="r2__library__carousel__item__description">
+									Internal Medicine
+								</p>
+							</div>
+						</div>
 				</div>
 			</div>
 			<div class="r2__carousel__arrows">
-					<span class="material-icons r2__carousel__arrow_left r2__arrow__button">
+					<span class="material-icons r2__carousel__arrow_left r2__arrow__button r2__arrow__button__inactive">
 						keyboard_arrow_left
 					</span>
 					<span class="material-icons r2__carousel__arrow_right r2__arrow__button">
@@ -170,27 +236,82 @@
 		
 		<section id="r2__popular__articles">
 			<div class="container">
-				<h1>Most popular</h1>
+				<h1 class="r2__popular__articles__heading">Most popular</h1>
 				<div class="r2__popular__carousel">
-					<!-- todo CAROUSEL -->
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/sepsis__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								Sepsis Management in Resource-limited Settings
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/tuberculosis__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								Tuberculosis in Adults and Children
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/pediatric__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								Red Book Atlas of Pediatric Infectious Diseases
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/infections__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								Mandell, Douglas, and Bennett's Principles and Practice of…
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/design__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								The Non-designers Book
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/programming__book.jpg" alt="Book">
+							<p class="r2__popular__carousel__item__description">
+								C Programming
+							</p>
+						</div>
+					</div>
+					<div class="r2__popular__carousel__item">
+						<div class="r2__popular__carousel__item__inner">
+							<img src="./assets/medicine__book.jpg" alt="book">
+							<p class="r2__popular__carousel__item__description">
+								Internal Medicine
+							</p>
+						</div>
+					</div>
 				</div>
 				<div class="r2__popular__publisher">
 					<div class="r2__popular__publisher__inner">
 						<div class="r2__popular__publisher__inner_text">
 							<h3>Featured publisher</h3>
-							<h1>Health Administration Press</h1>
+							<h1>Health <br> Administration <br> Press</h1>
 							<div class="r2__popular__publisher__inner_button">
 								<a href="#" class="r2__button">See full list of titles</a>
 							</div>
 						</div>
 						<div class="r2__popular__publisher__inner__image">
-							<!-- todo PUBLISHER IMAGE -->
+							<img src="./assets/featured__book.jpg" alt="Book">
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="r2__popular__carousel__arrows">
-					<span class="material-icons r2__popular__carousel__arrow_left r2__arrow__button">
+					<span class="material-icons r2__popular__carousel__arrow_left r2__arrow__button r2__arrow__button__inactive">
 						keyboard_arrow_left
 					</span>
 					<span class="material-icons r2__popular__carousel__arrow_right r2__arrow__button">

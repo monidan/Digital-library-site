@@ -1,6 +1,7 @@
 #r2__header{
 		background-color: $black--200;
 		margin-bottom: 5rem;
+		position: relative;
 
     .container{
 				display: flex;
@@ -46,11 +47,12 @@
 			display: flex;
 			height: 100%;
 			align-self: center;
-			justify-content: space-between	;
+			justify-content: space-between;
 			
 			span{
 				color: rgba($white, 0.8);
 				transition: .5s;
+				cursor: pointer;
 
 				&:hover{
 					color: rgba($white, 1);
@@ -58,6 +60,35 @@
 
 				&:last-child{
 					margin-left: 1.3rem;
+				}
+			}
+
+			.r2__header__search__close_button{
+				display: none;
+			}
+
+			.r2__header__search{
+				display: flex;
+				align-items: center;
+				height: 100%;
+
+				&__input{
+					display: none;
+					top: 0;
+					right: 30rem;
+					position: absolute;
+					width: 10%;
+					height: calc(100% - 6px);
+					background-color: rgba($white, 0.8);
+					font-size: $p--size;
+					font-style: italic;
+					color: rgba($black--200, 1);
+					font-weight: $light;
+
+					border-radius: $buttonBorderRadius;
+					padding-left: .5rem;
+
+					border-color: transparent;
 				}
 			}
 	}

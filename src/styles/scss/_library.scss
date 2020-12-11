@@ -1,8 +1,59 @@
 #r2__library{
+    width: 100%;
+    position: relative;
 
     margin-bottom: 5rem;
 
     h1{
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .r2__library__carousel{
+        display: grid;
+        grid-template-columns: repeat(7, calc(25% - 1rem));
+        column-gap: 1rem;
+        overflow: hidden;
+        width: 100%;
+
+        &__item{
+            background-color: white;
+            border-radius: $borderRadius;
+            width: 100%;
+            cursor: pointer;
+            margin: 3rem 0;
+
+            transition: .5s all;
+
+            img{
+                width: 50%;
+                height: 6rem;
+                object-fit: cover;
+                object-position: top left;
+                border-radius: $borderRadius;
+
+                margin-bottom: 1rem;
+            }
+
+            &:hover{
+                color: $red--700;
+                position: relative;
+                bottom: 10px;
+                box-shadow: 3px 5px 30px 1px rgba($grey--200, 0.1);
+            }
+        }
+
+        &__item__inner{
+            padding: 1.5rem 1.5rem 2rem;
+        }
+    }
+
+    .r2__carousel__arrows{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        top: calc(55% + 25px);
+        left: 17%;   
+        z-index: -1;
     }
 }

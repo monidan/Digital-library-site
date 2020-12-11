@@ -1,0 +1,94 @@
+#r2__library__benefits{
+    margin-bottom: 7rem;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 1rem));
+        grid-template-rows: 85% calc(15% - 1rem);
+        gap: 1rem;
+
+        .r2__benefits__help{
+            grid-row: 1/3;
+            background-color: $blue--700;
+            border-radius: $borderRadius;
+
+            &__inner{
+                padding: 4rem;
+
+                h2{
+                    color: $blue--200;
+                    font-weight: $heavy;
+                }
+
+                p{
+                    margin-top: 1rem;
+                    color: $white;
+                }
+
+                .r2__button{
+                    color: $blue--200;
+                    background-color: rgba($blue--200, 0.1);
+                    border-radius: $buttonBorderRadius;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .r2__titles__help{
+            background-color: $blue--700;
+            border-radius: $borderRadius;
+
+            &__inner{
+                padding: 4rem;
+
+                h2{
+                    color: $blue--200;
+                    font-weight: $heavy;
+                }
+
+                p{
+                    margin-top: 1rem;
+                    color: $white;
+                }
+            }
+        }
+
+        .r2__library__mail{
+            display: flex;
+            align-items: center;
+            background-color: $red--700;
+            border-radius: $borderRadius;
+
+            &__inner{
+                display: flex;
+                padding: 0 3rem;
+                align-items: center;
+                width: 100%;
+
+                .r2__library_icon{
+                    display: inline-flex;
+                    align-items: center;
+                    
+                    span{
+                        font-size: 40px;
+                        color: $white;
+                    }
+                }
+
+                .r2__mail{
+                    color: $white;
+                    font-size: 20px;
+                    margin: 0 auto;
+
+                    a{
+                        color: $white;
+                    }
+
+                    span{
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

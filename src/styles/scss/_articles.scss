@@ -1,0 +1,37 @@
+#r2__popular__articles{
+    margin-bottom: 5rem;
+
+    .r2__popular__carousel{
+        margin-bottom: 3rem;
+    }
+
+    .r2__popular__publisher{
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 30%;
+        column-gap: 40%;
+        background-color: $white;
+        border-radius: $borderRadius;
+
+        &__inner{
+            padding: 3rem;
+
+            h3{
+                color: $red--700;
+                font-weight: $light;
+                font-style: italic;
+            }
+            h1{
+                font-size: 48px;
+                font-weight: $heavy;
+            }
+
+            .r2__button{
+                color: $red--700;
+                background-color: rgba($red--700, 0.1);
+                border-radius: $buttonBorderRadius;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

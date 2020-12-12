@@ -9,7 +9,6 @@
         width: 65%;
         top: calc(25% + 40px);
         left: 17%;  
-        z-index: -1;
     }
 
     .r2__popular__carousel{
@@ -25,7 +24,9 @@
             background-color: white;
             border-radius: $borderRadius;
             width: 100%;
+            z-index: 2;
             margin: 3rem 0;
+            transition: .5s;
 
             cursor: pointer;
 

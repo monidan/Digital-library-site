@@ -136,7 +136,7 @@ span.r2__arrow__button__inactive {
 }
 #r2__header .r2__header__buttons span {
   color: rgba(255, 255, 255, 0.8);
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 #r2__header .r2__header__buttons span:hover {
@@ -146,7 +146,10 @@ span.r2__arrow__button__inactive {
   margin-left: 1.3rem;
 }
 #r2__header .r2__header__buttons .r2__header__search__close_button {
-  display: none;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  z-index: -1;
 }
 #r2__header .r2__header__buttons .r2__header__search {
   display: flex;
@@ -154,9 +157,8 @@ span.r2__arrow__button__inactive {
   height: 100%;
 }
 #r2__header .r2__header__buttons .r2__header__search__input {
-  display: none;
   top: 0;
-  right: 30rem;
+  right: 29rem;
   position: absolute;
   width: 10%;
   height: calc(100% - 6px);
@@ -168,6 +170,8 @@ span.r2__arrow__button__inactive {
   border-radius: 8px;
   padding-left: 0.5rem;
   border-color: transparent;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 
 #r2__greeting__block {

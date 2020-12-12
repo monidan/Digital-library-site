@@ -184,4 +184,32 @@
 
   leftArrowEl.addEventListener('click', slideCarousel);
   rightArrowEl.addEventListener('click', slideCarousel);
-})()
+})();
+
+// HEADER Search button
+
+(function(){
+  'use strict';
+
+  const mainEl = document.querySelector('#r2__header');
+
+  const searchButtonEl = mainEl.querySelector('.r2__header__search_button');
+  const closeSearchButtonEl = mainEl.querySelector('.r2__header__search__close_button');
+
+  const searchInputEl = mainEl.querySelector('#header__search');
+
+  const showInput = e => {
+    searchInputEl.style.opacity = '1';
+    closeSearchButtonEl.style.cssText = 'opactiy: 1; z-index: 2;';
+    searchButtonEl.style.cssText = 'opacity: 0; z-index: -1';
+  }
+
+  const closeInput = e => {
+    searchInputEl.style.opacity = '0';
+    closeSearchButtonEl.style.cssText = 'opactiy: 0; z-index: -1;';
+    searchButtonEl.style.cssText = 'opacity: 1; z-index: 2';
+  }
+
+  searchButtonEl.addEventListener('click', showInput);
+  closeSearchButtonEl.addEventListener('click', closeInput);
+})();

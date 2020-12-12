@@ -673,3 +673,41 @@ main .r2__about__library .r2__description__item__inner__library {
 #r2__footer .container .r2__footer__contact_navigation ul li a:hover::after {
   width: 100%;
 }
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  #r2__header {
+    width: 100%;
+  }
+  #r2__header .container {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    margin: 0;
+  }
+  #r2__header .r2__header__navigation_bar {
+    display: none;
+  }
+
+  #r2__greeting__block {
+    grid-template-columns: calc(100% - 32px);
+    grid-template-rows: repeat(3, 33%);
+    margin: 0 auto;
+  }
+  #r2__greeting__block .r2__greeting__slider {
+    grid-column: auto;
+  }
+
+  .r2__about__library {
+    grid-template-columns: 100% !important;
+    grid-template-rows: repeat(5, calc(20% - 1rem)) !important;
+  }
+  .r2__about__library .r2__library__description__inner {
+    padding: 0 !important;
+  }
+}

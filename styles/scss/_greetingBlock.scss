@@ -138,7 +138,7 @@
             &__image{
                 position: absolute;
                 right: 1.5rem;
-                transition: .5s;
+                transition: all .5s;
                 border-radius: $borderRadius;
                 box-shadow: 0 0 30px 5px rgba($red--700, 0.3);
 
@@ -168,16 +168,11 @@
                     position: absolute;
                     z-index: 20;
                     color: $red--700;
-                    left: calc(50% - 1.7rem - 6px);
-                    top: calc(50% - 1.7rem - 6px);
-                    border-radius: 50px;
+                    left: calc(50% - 1.7rem);
+                    top: calc(50% - 1.7rem);
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-
-                    cursor: pointer;
-                    border: 6px solid rgba($white, 0.3);
-                    transition: .5s;
 
                     span{
                         font-size: 28px;
@@ -189,18 +184,16 @@
                         -khtml-user-select: none;
                         -webkit-user-select: none;
                         -o-user-select: none;
-                        transition: .5s;
+                        transition: all .5s ease-in-out ;
+                        box-shadow: 0 0 0 6px rgba($white, .3);
+                        cursor: pointer;
                         
                         &:hover{
-                            padding: calc(1rem + 6px);
+                            animation: shadowing .5s alternate slidein;
+                            box-shadow: 0 0 0 6px $white;   
                         }
                     }
 
-                    &:hover{
-                        left: calc(50% - 1.7rem - 12px);
-                        top: calc(50% - 1.7rem - 12px);
-                        border-color: transparent;
-                    }
                 }
 
                 &:hover{
@@ -209,5 +202,11 @@
                 }
             }
         }
+    }
+}
+
+@keyframes shadowing {
+    0% {
+        box-shadow: 0 0 0 1px rgba($white, .3);
     }
 }

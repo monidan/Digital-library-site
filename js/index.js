@@ -199,13 +199,13 @@
   const showInput = e => {
     searchInputEl.style.opacity = '1';
     closeSearchButtonEl.style.cssText = 'opactiy: 1; z-index: 2;';
-    searchButtonEl.style.cssText = 'opacity: 0; z-index: -1';
+    searchButtonEl.style.cssText = 'opacity: 0; z-index: -1;';
   }
 
   const closeInput = e => {
     searchInputEl.style.opacity = '0';
     closeSearchButtonEl.style.cssText = 'opactiy: 0; z-index: -1;';
-    searchButtonEl.style.cssText = 'opacity: 1; z-index: 2';
+    searchButtonEl.style.cssText = 'opacity: 1; z-index: 2;';
   }
 
   searchButtonEl.addEventListener('click', showInput);

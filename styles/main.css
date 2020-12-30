@@ -148,7 +148,6 @@ span.r2__arrow__button__inactive {
 #r2__header .r2__header__buttons .r2__header__search__close_button {
   opacity: 1;
   transition: 0.5s ease-in-out;
-  position: absolute;
   z-index: -1;
 }
 #r2__header .r2__header__buttons .r2__header__search {
@@ -157,20 +156,17 @@ span.r2__arrow__button__inactive {
   height: 100%;
 }
 #r2__header .r2__header__buttons .r2__header__search__input {
-  top: 0;
-  right: 29rem;
-  position: absolute;
-  width: 10%;
+  width: 100%;
+  height: 100%;
   height: calc(100% - 6px);
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
+  font-size: calc($p--size - 3px);
   font-style: italic;
   color: #181819;
   font-weight: 300;
+  background-color: transparent;
   border-radius: 8px;
   padding-left: 0.5rem;
   border-color: transparent;
-  opacity: 0;
   transition: 0.5s ease-in-out;
 }
 
@@ -291,7 +287,7 @@ span.r2__arrow__button__inactive {
 #r2__greeting__block .r2__greeting_demo__inner__image {
   position: absolute;
   right: 1.5rem;
-  transition: 0.5s;
+  transition: all 0.5s;
   border-radius: 24px;
   box-shadow: 0 0 30px 5px rgba(208, 2, 27, 0.3);
 }
@@ -317,15 +313,11 @@ span.r2__arrow__button__inactive {
   position: absolute;
   z-index: 20;
   color: #D0021B;
-  left: calc(50% - 1.7rem - 6px);
-  top: calc(50% - 1.7rem - 6px);
-  border-radius: 50px;
+  left: calc(50% - 1.7rem);
+  top: calc(50% - 1.7rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border: 6px solid rgba(255, 255, 255, 0.3);
-  transition: 0.5s;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image .r2__greeting_demo__image_play_button span {
   font-size: 28px;
@@ -337,21 +329,24 @@ span.r2__arrow__button__inactive {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image .r2__greeting_demo__image_play_button span:hover {
-  padding: calc(1rem + 6px);
-}
-#r2__greeting__block .r2__greeting_demo__inner__image .r2__greeting_demo__image_play_button:hover {
-  left: calc(50% - 1.7rem - 12px);
-  top: calc(50% - 1.7rem - 12px);
-  border-color: transparent;
+  animation: shadowing 0.5s alternate slidein;
+  box-shadow: 0 0 0 6px white;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image:hover {
   margin-top: 6px;
   right: calc(1.5rem - 6px);
 }
 
+@keyframes shadowing {
+  0% {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+}
 #r2__library {
   width: 100%;
   position: relative;

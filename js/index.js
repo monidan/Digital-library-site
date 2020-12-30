@@ -46,7 +46,6 @@
       if(checkLimit(direction)){
         leftArrowEl.classList.add('r2__arrow__button__inactive')
       }
-      console.log('left Counter', translateXProps)
     } else {
       leftArrowEl.classList.remove('r2__arrow__button__inactive')
 
@@ -64,7 +63,6 @@
       if(checkLimit(direction)){
         rightArrowEl.classList.add('r2__arrow__button__inactive');
       }
-      console.log('right Counter', translateXProps)
     }
   }
 
@@ -133,14 +131,15 @@
       translateXProps.percentage -= PERCANTAGE_STEP;
       translateXProps.rem -= REM_STEP;
 
-      carouselItemsEls.forEach(carouselItem => {
-        carouselItem.style.transform = `translateX(calc(-${translateXProps.percentage}% - ${translateXProps.rem}rem))`;
-      })
+      // carouselItemsEls.forEach(carouselItem => {
+      //   carouselItem.style.transform = `translateX(calc(-${translateXProps.percentage}% - ${translateXProps.rem}rem))`;
+      // })
+
+
 
       if(checkLimit(direction)){
         leftArrowEl.classList.add('r2__arrow__button__inactive')
       }
-      console.log('left Counter', translateXProps)
     } else {
       leftArrowEl.classList.remove('r2__arrow__button__inactive')
 
@@ -158,7 +157,6 @@
       if(checkLimit(direction)){
         rightArrowEl.classList.add('r2__arrow__button__inactive');
       }
-      console.log('right Counter', translateXProps)
     }
   }
 

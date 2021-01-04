@@ -47,7 +47,7 @@
 			display: flex;
 			height: 100%;
 			align-self: center;
-			justify-content: space-between;
+			justify-content: space-around;
 			
 			span{
 				color: rgba($white, 0.8);
@@ -58,8 +58,8 @@
 					color: rgba($white, 1);
 				}
 
-				&:last-child{
-					margin-left: 1.3rem;
+				&{
+					margin: 0 .3rem;
 				}
 			}
 

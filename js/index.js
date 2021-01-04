@@ -131,11 +131,9 @@
       translateXProps.percentage -= PERCANTAGE_STEP;
       translateXProps.rem -= REM_STEP;
 
-      // carouselItemsEls.forEach(carouselItem => {
-      //   carouselItem.style.transform = `translateX(calc(-${translateXProps.percentage}% - ${translateXProps.rem}rem))`;
-      // })
-
-
+      carouselItemsEls.forEach(carouselItem => {
+        carouselItem.style.transform = `translateX(calc(-${translateXProps.percentage}% - ${translateXProps.rem}rem))`;
+      })
 
       if(checkLimit(direction)){
         leftArrowEl.classList.add('r2__arrow__button__inactive')
@@ -192,22 +190,18 @@
   const mainEl = document.querySelector('#r2__header');
 
   const searchButtonEl = mainEl.querySelector('.r2__header__search_button');
-  const closeSearchButtonEl = mainEl.querySelector('.r2__header__search__close_button');
 
   const searchInputEl = mainEl.querySelector('#header__search');
 
   const showInput = e => {
     searchInputEl.style.opacity = '1';
-    closeSearchButtonEl.style.cssText = 'opactiy: 1; z-index: 2;';
     searchButtonEl.style.cssText = 'opacity: 0; z-index: -1;';
   }
 
   const closeInput = e => {
     searchInputEl.style.opacity = '0';
-    closeSearchButtonEl.style.cssText = 'opactiy: 0; z-index: -1;';
     searchButtonEl.style.cssText = 'opacity: 1; z-index: 2;';
   }
 
   searchButtonEl.addEventListener('click', showInput);
-  closeSearchButtonEl.addEventListener('click', closeInput);
 })();

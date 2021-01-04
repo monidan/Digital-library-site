@@ -1,7 +1,7 @@
 #r2__greeting__block{
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: repeat(auto-fit, 50%);
+    grid-template-rows: auto auto;
     row-gap: 1rem;
     column-gap: 1rem;
 

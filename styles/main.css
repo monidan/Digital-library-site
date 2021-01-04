@@ -173,7 +173,7 @@ span.r2__arrow__button__inactive {
 #r2__greeting__block {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: repeat(auto-fit, 50%);
   row-gap: 1rem;
   column-gap: 1rem;
   margin-bottom: 5rem;
@@ -245,6 +245,9 @@ span.r2__arrow__button__inactive {
   justify-content: flex-end;
   column-gap: 0.7rem;
 }
+#r2__greeting__block .r2__greeting__free_trial {
+  height: 100%;
+}
 #r2__greeting__block .r2__greeting__free_trial__inner {
   padding: 3rem;
   background-color: #0E1E31;
@@ -275,7 +278,9 @@ span.r2__arrow__button__inactive {
   position: relative;
 }
 #r2__greeting__block .r2__greeting_demo__inner {
-  padding: 3rem;
+  padding: 3rem 3rem 0;
+  display: inline-flex;
+  flex-direction: column;
 }
 #r2__greeting__block .r2__greeting_demo__inner h4 {
   color: #D0021B;
@@ -285,11 +290,20 @@ span.r2__arrow__button__inactive {
   padding-bottom: 1rem;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image {
-  position: absolute;
-  right: 1.5rem;
-  transition: all 0.5s;
+  height: 100%;
+  align-self: flex-end;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
   border-radius: 24px;
   box-shadow: 0 0 30px 5px rgba(208, 2, 27, 0.3);
+  z-index: 5;
+}
+#r2__greeting__block .r2__greeting_demo__inner__image:hover {
+  margin-top: 6px;
+  left: 6px;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image img {
   max-width: 13rem;
@@ -298,26 +312,25 @@ span.r2__arrow__button__inactive {
   border-radius: 24px;
   overflow: hidden;
   cursor: pointer;
+  bottom: 0;
 }
-#r2__greeting__block .r2__greeting_demo__inner__image .layer {
+#r2__greeting__block .r2__greeting_demo__inner__image .greeting__image__overlay {
+  position: absolute;
   width: 100%;
   background-color: rgba(208, 2, 27, 0.7);
   height: 100%;
   z-index: 10;
-  position: absolute;
   border-radius: 24px;
   top: 0;
   cursor: pointer;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image .r2__greeting_demo__image_play_button {
-  position: absolute;
   z-index: 20;
   color: #D0021B;
-  left: calc(50% - 1.7rem);
-  top: calc(50% - 1.7rem);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
 }
 #r2__greeting__block .r2__greeting_demo__inner__image .r2__greeting_demo__image_play_button span {
   font-size: 28px;
@@ -337,10 +350,6 @@ span.r2__arrow__button__inactive {
   animation: shadowing 0.5s alternate slidein;
   box-shadow: 0 0 0 6px white;
 }
-#r2__greeting__block .r2__greeting_demo__inner__image:hover {
-  margin-top: 6px;
-  right: calc(1.5rem - 6px);
-}
 
 @keyframes shadowing {
   0% {
@@ -358,7 +367,7 @@ span.r2__arrow__button__inactive {
 }
 #r2__library .r2__library__carousel__wrapper {
   display: grid;
-  grid-template-columns: repeat(7, calc(25% - 1rem));
+  grid-template-columns: repeat(7, calc(25% - .75rem));
   column-gap: 1rem;
 }
 #r2__library .r2__library__carousel__item {
@@ -386,14 +395,20 @@ span.r2__arrow__button__inactive {
 #r2__library .r2__library__carousel__item__inner {
   padding: 1.5rem 1.5rem 2rem;
 }
-#r2__library .r2__carousel__arrows {
+#r2__library .container {
+  position: relative;
+}
+#r2__library .container span.r2__arrow__button {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 65%;
-  top: calc(55% + 15px);
-  left: 17%;
-  z-index: 20;
+  top: calc(55% + .6rem);
+}
+#r2__library .container span.r2__arrow__button.r2__carousel__arrow_right {
+  right: 0;
+  margin-right: -2.5rem;
+}
+#r2__library .container span.r2__arrow__button.r2__carousel__arrow_left {
+  left: 0;
+  margin-left: -2.5rem;
 }
 
 main {
@@ -468,18 +483,25 @@ main .r2__about__library .r2__description__item__inner__library {
   margin-bottom: 5rem;
   position: relative;
 }
-#r2__popular__articles .r2__popular__carousel__arrows {
+#r2__popular__articles .r2__popular__carousel__wrapper {
+  margin: 0 0 3rem;
+  position: relative;
+}
+#r2__popular__articles .r2__popular__carousel__wrapper > span {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 65%;
-  top: calc(25% + 40px);
-  left: 17%;
+  top: calc(50% - .85rem);
+}
+#r2__popular__articles .r2__popular__carousel__wrapper > span.r2__carousel__arrow_left {
+  left: 0;
+  margin-left: -2.5rem;
+}
+#r2__popular__articles .r2__popular__carousel__wrapper > span.r2__carousel__arrow_right {
+  right: 0;
+  margin-right: -2.5rem;
 }
 #r2__popular__articles .r2__popular__carousel {
-  margin: 0 0 3rem;
   display: grid;
-  grid-template-columns: repeat(7, calc(25% - 1rem));
+  grid-template-columns: repeat(7, calc(25% - .75rem));
   column-gap: 1rem;
   overflow: hidden;
   width: 100%;
@@ -488,7 +510,6 @@ main .r2__about__library .r2__description__item__inner__library {
   background-color: white;
   border-radius: 24px;
   width: 100%;
-  z-index: 2;
   margin: 3rem 0;
   transition: 0.5s;
   cursor: pointer;
@@ -671,40 +692,16 @@ main .r2__about__library .r2__description__item__inner__library {
   width: 100%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1500px) {
   .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    max-width: 85%;
   }
-
-  #r2__header {
-    width: 100%;
-  }
+}
+@media screen and (max-width: 1035px) {
   #r2__header .container {
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: space-between;
   }
   #r2__header .r2__header__navigation_bar {
     display: none;
-  }
-
-  #r2__greeting__block {
-    grid-template-columns: calc(100% - 32px);
-    grid-template-rows: repeat(3, 33%);
-    margin: 0 auto;
-  }
-  #r2__greeting__block .r2__greeting__slider {
-    grid-column: auto;
-  }
-
-  .r2__about__library {
-    grid-template-columns: 100% !important;
-    grid-template-rows: repeat(5, calc(20% - 1rem)) !important;
-  }
-  .r2__about__library .r2__library__description__inner {
-    padding: 0 !important;
   }
 }
